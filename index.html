@@ -75,7 +75,7 @@ h2{font:300 clamp(2.1rem,4.6vw,4rem)/1.05 var(--display);letter-spacing:-.035em;
 h2 b{font-weight:500}
 .lede{color:var(--muted);font-size:1.05rem;max-width:36ch;margin:0 0 26px}
 .big{font:300 clamp(3.4rem,9vw,7.4rem)/.95 var(--display);letter-spacing:-.05em;font-variant-numeric:tabular-nums}
-.big small{font:500 clamp(.9rem,1.6vw,1.15rem) var(--body);letter-spacing:.04em;color:var(--muted);margin-left:.5em;text-transform:none}
+.big small{display:inline-block;max-width:9.5em;line-height:1.2;vertical-align:baseline;font:500 clamp(.9rem,1.6vw,1.15rem) var(--body);letter-spacing:.04em;color:var(--muted);margin-left:.5em;text-transform:none}
 .cap{margin-top:14px;font:500 1rem/1.45 var(--body);color:var(--ink);min-height:4.4em}
 .cap em{font-style:normal;color:var(--muted)}
 .src{font:400 .78rem/1.4 var(--body);color:var(--faint);margin:22px 0 0;max-width:46ch}
@@ -287,9 +287,9 @@ h2 b{font-weight:500}
       <div>
         <p class="tag"><b>00</b>Escena · Empezar</p>
         <h2>Todo empieza con <b>una pulsera</b></h2>
-        <p class="lede">Cada pulsera que cruzó una entrada del torneo quedó registrada.</p>
+        <p class="lede">Cada vez que una pulsera cruzó un torniquete de Kigo, su entrada quedó registrada.</p>
         <div class="big" id="p-big">0<small>pulseras</small></div>
-        <div class="cap"><em>con entradas registradas en el torneo</em></div>
+        <div class="cap"><em>con entradas registradas por los torniquetes de Kigo</em></div>
       </div>
       <div class="phonebox"><div class="phone"><div class="screen on"><img src="img/home.jpg" alt="Inicio de la mini app, con las personas registradas y el botón para vincular pulsera" loading="lazy"></div></div></div>
     </div>
@@ -297,15 +297,15 @@ h2 b{font-weight:500}
 </section>
 
 <!-- 01 entradas -->
-<section class="chapter" id="entradas" data-name="Entradas" data-h="480vh" data-fn="entradas">
+<section class="chapter" id="entradas" data-name="Mini app" data-h="480vh" data-fn="entradas">
   <div class="stage" style="--gx:78%;--gy:55%">
     <div class="glow"></div>
     <div class="wrap">
       <div>
-        <p class="tag"><b>01</b>Escena · Entrar</p>
+        <p class="tag"><b>01</b>Escena · Entrar a la mini app</p>
         <h2>Todo empezó con <b>una entrada</b></h2>
         <p class="lede">El domingo 15, 30 personas abrieron la mini app por primera vez. Cinco días después, el viernes 20, ya eran 273 en un solo día.</p>
-        <div class="big" id="e-big">0<small>entradas</small></div>
+        <div class="big" id="e-big">0<small>entradas a la mini app</small></div>
         <div class="cap" id="e-cap"></div>
       </div>
       <div class="glass" style="padding:18px 20px 16px"><div class="cols" id="e-cols"></div></div>
@@ -321,15 +321,15 @@ h2 b{font-weight:500}
       <div>
         <p class="tag"><b>02</b>Escena · Volver</p>
         <h2>Y la mayoría <b>volvió</b></h2>
-        <p class="lede">No fue una visita de una sola vez: 408 de las 572 personas regresaron después de su primera entrada.</p>
-        <div class="call glass" id="r-call"><b>1,146 entradas</b><span>las suman 64 personas que entraron 11 veces o más: el 42 % de las 2,750 entradas.</span></div>
+        <p class="lede">No fue una visita de una sola vez: 408 de las 572 personas regresaron después de su primera entrada a la mini app.</p>
+        <div class="call glass" id="r-call"><b>1,146 entradas a la mini app</b><span>las suman 64 personas que entraron 11 veces o más: el 42 % de las 2,750 entradas.</span></div>
       </div>
       <div class="glass panel">
         <div class="ringwrap">
           <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="9"/><circle id="r-arc" cx="60" cy="60" r="52" fill="none" stroke="url(#rg)" stroke-width="9" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="326.7"/><defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8DB9FF"/><stop offset="1" stop-color="#FF6900"/></linearGradient></defs></svg>
           <div class="mid"><b class="num" id="r-num">0 %</b><span>de las 572 personas volvió a entrar</span></div>
         </div>
-        <div><p class="minihead">¿Cuántas veces entró cada persona?</p><div class="hbars" id="r-bars"></div></div>
+        <div><p class="minihead">¿Cuántas veces entró cada persona a la mini app?</p><div class="hbars" id="r-bars"></div></div>
       </div>
     </div>
   </div>
@@ -344,7 +344,7 @@ h2 b{font-weight:500}
         <p class="tag"><b>03</b>Escena · Cuándo</p>
         <h2>Las <b>mañanas</b> del torneo</h2>
         <p class="lede">El día arrancaba temprano. Entre las 7 y las 12 h entró casi la mitad de las veces.</p>
-        <div class="big" id="h-big">0 %<small>de las entradas</small></div>
+        <div class="big" id="h-big">0 %<small>de las entradas a la mini app</small></div>
         <div class="cap"><em>ocurrió entre las 7 y las 12 h</em></div>
       </div>
       <div class="glass" style="padding:18px 20px 16px"><div class="hours"><div class="band" id="h-band"><span>7 a 12 h</span></div><div class="cols" id="h-cols"></div></div></div>
@@ -461,7 +461,7 @@ h2 b{font-weight:500}
       </div>
       <div>
         <div class="mini-grid" id="m-grid">
-          <div class="glass tile"><b class="num">4,816</b><span>entradas a los lotes del torneo de esos 1,826 usuarios</span></div>
+          <div class="glass tile"><b class="num">4,816</b><span>entradas a los lotes de estacionamiento del torneo de esos 1,826 usuarios</span></div>
           <div class="glass tile"><b class="num">868</b><span>de esos 1,826 usuarios, fueron dos días o más (48 %)</span></div>
           <div class="glass tile"><b class="num">931</b><span>de esos usuarios llegaron de la CDMX (494), Puebla (273) y Nuevo León (164)</span></div>
         </div>
@@ -534,7 +534,7 @@ function entradas(p){
   E.items.forEach(function(it,i){var f=clamp(idx-i);it.b.style.transform="scaleY("+ease(f)+")";it.c.classList.toggle("on",i===cur);it.c.classList.toggle("seen",f>.55);it.c.classList.toggle("peak-on",i===5&&f>.55)});
   var prev=cur?CUM[cur-1]:0,val=prev+(CUM[cur]-prev)*ease(clamp(frac));
   E.big.firstChild.nodeValue=N(val);
-  var d=DAYS[cur];E.cap.innerHTML=d[0].replace("*","")+" · <b>"+N(d[1])+" entradas</b> <em>de "+N(d[2])+" personas</em><br><em>"+NOTES[cur]+"</em>";
+  var d=DAYS[cur];E.cap.innerHTML=d[0].replace("*","")+" · <b>"+N(d[1])+" entradas a la mini app</b> <em>de "+N(d[2])+" personas</em><br><em>"+NOTES[cur]+"</em>";
 }
 
 /* ---------- capítulo: regreso ---------- */
