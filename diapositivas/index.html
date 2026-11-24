@@ -186,6 +186,8 @@ h2 b{font-weight:500}
 .endslide h2{font-size:clamp(2.4rem,5.2vw,4.4rem);margin-bottom:30px;max-width:19ch}
 .grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;max-width:900px}
 .grid4 .tile b{font-size:clamp(2rem,3.6vw,3rem)}
+.end .tile,.endslide .tile,.mini-grid .tile{background:rgba(7,16,28,.82)}
+.grid4{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));max-width:min(900px,calc(93vw - 48vh - 160px))}
 .thanks{display:flex;align-items:center;gap:18px;margin-top:40px;flex-wrap:wrap}
 .thanks img.tdla{height:52px;width:auto}.thanks img.kigo{height:26px;width:auto}.thanks i{width:1px;height:30px;background:var(--line)}
 .endslide .src{max-width:60ch}
@@ -193,6 +195,7 @@ h2 b{font-weight:500}
 :focus-visible{outline:2px solid var(--blue-soft);outline-offset:3px}
 
 @media (max-width:900px){
+  .grid4{max-width:none;grid-template-columns:repeat(2,minmax(0,1fr))}
   .dots{display:none}
   .stage .wrap{grid-template-columns:minmax(0,1fr);gap:14px;align-content:center}
   h2{font-size:clamp(1.9rem,8vw,2.6rem);margin-bottom:10px}
@@ -256,8 +259,8 @@ html,body{height:100%;overflow:hidden}
 .bgfx .warm{opacity:0}.bgfx.is-warm .warm{opacity:1}.bgfx.is-warm .blue{opacity:0}
 .bgfx .arc{transition:transform 1.5s cubic-bezier(.2,.7,.2,1);transform:translate3d(calc(var(--mx,0vw) + var(--i,0)*var(--k,-3vw)),0,0)}
 .bgfx .a1{--k:-2.2vw}.bgfx .a2{--k:-3.4vw}.bgfx .a3{--k:-4.8vw}
-.arc.b1{width:110vh;height:110vh;right:-62vh;top:50%;margin-top:-55vh;background:radial-gradient(circle at 24% 40%,#FFD9BD 0%,#FF9A52 28%,#FF6900 60%,#7A2E00 94%);--k:-2vw}
-.arc.b2{width:78vh;height:78vh;right:-52vh;top:50%;margin-top:-39vh;background:radial-gradient(circle at 24% 40%,#FFF0E4 0%,#FFB070 30%,#FF6900 66%,#5A2000 98%);--k:-3.4vw}
+.arc.b1{width:110vh;height:110vh;right:-62vh;top:50%;margin-top:-55vh;background:radial-gradient(circle at 24% 40%,#FFD9BD 0%,#FF9A52 28%,#FF6900 60%,#7A2E00 94%);--k:-.6vw}
+.arc.b2{width:78vh;height:78vh;right:-52vh;top:50%;margin-top:-39vh;background:radial-gradient(circle at 24% 40%,#FFF0E4 0%,#FFB070 30%,#FF6900 66%,#5A2000 98%);--k:-.9vw}
 .bgfx .arc{will-change:transform}
 .shell{position:relative;z-index:1}
 .herostat{position:static;transform:none;text-align:left;color:#fff;display:grid;gap:6px;justify-items:center}
