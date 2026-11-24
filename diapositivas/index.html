@@ -304,6 +304,20 @@ html,body{height:100%;overflow:hidden}
   .slide.stage .wrap>*>*{opacity:1;transform:none}
 }
 
+
+/* Elegir: todo el texto comparte el mismo borde izquierdo y derecho; las cajas sobresalen 15px */
+.sec-stage .total{align-items:center;margin:0 0 18px}
+.sec-stage .total .big{line-height:1}
+.sec-stage .minihead{margin:0 0 8px!important}
+.sec-stage .rank{gap:2px;margin:0 -15px 16px}
+.sec-stage .rrow{grid-template-columns:minmax(0,1.55fr) minmax(0,1fr) 3.6em;gap:16px;padding:6px 14px;min-height:36px}
+.sec-stage .rrow .nm{overflow-wrap:normal}
+.sec-stage .rrow .ct{min-width:0;width:100%}
+.sec-stage .detail{margin:0 -15px;padding:16px 14px}
+.sec-stage .detail .facts{align-items:start}
+.sec-stage .fact span{min-height:0}
+.sec-stage .hintline{margin:12px 0 0}
+@media (max-width:900px){.sec-stage .rank{margin:0 0 10px}.sec-stage .rrow{grid-template-columns:minmax(0,1.4fr) minmax(0,.8fr) 3em;gap:8px;padding:6px 8px;min-height:0}.sec-stage .detail{margin:0;padding:14px 16px}.sec-stage .fact span{min-height:0}}
 </style>
 </head>
 <body>
@@ -559,9 +573,9 @@ var TIMES=[[5,"1"],[183,"2 a 3"],[106,"4 a 6"],[57,"7 a 10"],[62,"11 o más"]];
 TIMES=[["1 entrada",164],["2 a 3 entradas",183],["4 a 6 entradas",106],["7 a 10 entradas",55],["11 o más entradas",64]];
 var HOURS=[5,2,1,1,0,14,40,100,133,123,143,118,112,86,86,79,81,65,65,64,95,74,72,32];
 var SECS=[
- {n:"Resultados",ap:1652,pe:304,pc:69,facts:[["35.6 h","de tiempo medido"],["5,623","interacciones"]],note:"Horarios y resultados del torneo. Una visita típica dura 56 segundos."},
- {n:"Mapa de estacionamientos con Kigo y TDLA",ap:402,pe:190,pc:43,facts:[["5.1 h","de tiempo medido"],["95","personas salieron a una app de mapas"]],note:"Entra y paga con Kigo, cerca de las sedes. Una visita típica dura 21 segundos."},
- {n:"Mapa del torneo TDLA en Kigo",ap:337,pe:179,pc:40,facts:[["4.9 h","de tiempo medido"],["1,121","interacciones"]],note:"Sedes, categorías y puntos de interés. Una visita típica dura 40 segundos."},
+ {n:"Resultados",ap:1652,pe:304,pc:69,facts:[["35.6 h","tiempo medido"],["5,623","interacciones"]],note:"Horarios y resultados del torneo. Una visita típica dura 56 segundos."},
+ {n:"Mapa de estacionamientos con Kigo y TDLA",ap:402,pe:190,pc:43,facts:[["5.1 h","tiempo medido"],["95","personas a una app de mapas"]],note:"Entra y paga con Kigo, cerca de las sedes. Una visita típica dura 21 segundos."},
+ {n:"Mapa del torneo TDLA en Kigo",ap:337,pe:179,pc:40,facts:[["4.9 h","tiempo medido"],["1,121","interacciones"]],note:"Sedes, categorías y puntos de interés. Una visita típica dura 40 segundos."},
  {n:"Rutas (Shuttle)",ap:186,pe:103,pc:23,facts:[],note:"Ruta del Kigo Bus en vivo. Solo registra aperturas: no mide tiempo ni interacciones."}
 ];
 var SEC_MAX=1652;
@@ -638,7 +652,7 @@ function setDetail(i){
   if(i<0){S.detail.innerHTML='<h3>El inicio de la mini app</h3><div class="facts" style="--cols:2"><div class="fact"><b>'+N(2671)+'</b><span>aperturas de secciones</span></div><div class="fact"><b>442</b><span>personas abrieron al menos una sección</span></div></div><p>Desde aquí eligen: cada tarjeta lleva a una sección.</p>';return}
   var s=SECS[i],f=s.facts,h='<h3>'+s.n+'</h3><div class="facts" style="--cols:'+(2+f.length)+'">'+
    '<div class="fact"><b>'+N(s.ap)+'</b><span>aperturas</span></div>'+
-   '<div class="fact"><b>'+N(s.pe)+'</b><span>personas, el '+s.pc+' % de las 442</span></div>';
+   '<div class="fact"><b>'+N(s.pe)+'</b><span>personas ('+s.pc+' % de 442)</span></div>';
   f.forEach(function(x){h+='<div class="fact"><b>'+x[0]+'</b><span>'+x[1]+'</span></div>'});
   S.detail.innerHTML=h+'</div>'+(s.note?'<p>'+s.note+'</p>':'');
 }
